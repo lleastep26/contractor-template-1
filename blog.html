@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | {{BUSINESS_NAME}} - {{TRADE}} Tips in {{CITY}}, {{STATE}}</title>
+<meta name="description" content="{{TRADE}} tips and advice from {{BUSINESS_NAME}} in {{CITY}}, {{STATE}}.">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>:root{--primary:{{PRIMARY_COLOR}};--secondary:{{SECONDARY_COLOR}};--dark:#0F172A;--light:#F8FAFC}.accent-bar{width:64px;height:4px;background:var(--secondary);border-radius:2px;margin:12px auto 0}</style>
+</head>
+<body class="bg-[var(--light)] text-slate-800 font-sans">
+
+<header class="bg-[var(--primary)] text-white sticky top-0 z-50 shadow-lg">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3"><img src="{{LOGO_URL}}" alt="{{BUSINESS_NAME}} logo" class="h-10" onerror="this.style.display='none'"><span class="text-xl font-extrabold">{{BUSINESS_NAME}}</span></a>
+    <nav class="hidden md:flex gap-8 font-medium">
+      <a href="index.html" class="hover:text-white/70">Home</a>
+      <a href="services.html" class="hover:text-white/70">Services</a>
+      <a href="about.html" class="hover:text-white/70">About</a>
+      <a href="gallery.html" class="hover:text-white/70">Gallery</a>
+      <a href="blog.html" class="text-white border-b-2 border-[var(--secondary)]">Blog</a>
+      <a href="contact.html" class="hover:text-white/70">Contact</a>
+    </nav>
+    <a href="tel:{{PHONE_DIGITS}}" class="bg-[var(--secondary)] px-5 py-2.5 rounded-lg font-bold hover:brightness-110">{{PHONE}}</a>
+  </div>
+</header>
+
+<section class="relative py-32 bg-cover bg-center" style="background-image:url('{{BLOG_BANNER_IMAGE}}')">
+  <div class="absolute inset-0 bg-gradient-to-r from-[var(--dark)]/90 to-[var(--primary)]/70"></div>
+  <div class="relative max-w-7xl mx-auto px-6 text-white text-center">
+    <h1 class="text-4xl md:text-6xl font-extrabold">{{TRADE}} Tips & Advice</h1>
+    <p class="mt-4 text-xl text-white/90">Helpful guides from the {{BUSINESS_NAME}} team</p>
+  </div>
+</section>
+
+<section class="py-24">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16"><h2 class="text-3xl md:text-4xl font-extrabold text-[var(--primary)]">Latest Posts</h2><div class="accent-bar"></div></div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {{BLOG_POSTS}}
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-[var(--secondary)] text-white text-center">
+  <h2 class="text-3xl md:text-4xl font-extrabold">Have a {{TRADE}} Question?</h2>
+  <div class="mt-8 flex flex-wrap justify-center gap-4"><a href="tel:{{PHONE_DIGITS}}" class="bg-white text-[var(--secondary)] px-8 py-4 rounded-lg font-bold text-lg">Call {{PHONE}}</a><a href="contact.html" class="border-2 border-white px-8 py-4 rounded-lg font-bold text-lg">Get a Free Quote</a></div>
+</section>
+
+<footer class="bg-[var(--dark)] text-white/70 py-10 text-center">
+  <p class="font-bold text-white text-lg">{{BUSINESS_NAME}}</p>
+  <p class="mt-2">{{TRADE}} &bull; {{CITY}}, {{STATE}} &bull; <a href="tel:{{PHONE_DIGITS}}" class="text-[var(--secondary)] font-bold">{{PHONE}}</a> &bull; {{EMAIL}}</p>
+  <p class="mt-4 text-sm">&copy; 2026 {{BUSINESS_NAME}}. All rights reserved.</p>
+</footer>
+</body>
+</html>
